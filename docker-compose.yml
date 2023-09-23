@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  astro:
+    build: .
+    command: /bin/sh -c "npm install && npm run dev -- --host 0.0.0.0;"
+    ports:
+      - 4321:4321
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
