@@ -1,5 +1,14 @@
 ---
 const pageTitle = "私について";
+
+const identity = {
+  firstName: "テスト",
+  country: "hogehoge国",
+  occupation: "夢追人",
+  hobbies: ["食べること", "眠ること", "遊ぶこと"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "攻撃力アップ"];
 ---
 
 <html lang="ja">
@@ -16,5 +25,16 @@ const pageTitle = "私について";
     <a href="/astro-tutorial/blog/">ブログ</a>
 		<h1>{ pageTitle }</h1>
     <p>このページは Astro チュートリアルを写経して作っています</p>
+    <ul>
+      <li>私の名前は{ identity.firstName }です。</li>
+      <li>{ identity.country }に住んでおり、{ identity.occupation }として働いています。</li>
+      { identity.hobbies.length >= 2 &&
+        <li>私の2つの趣味は{ identity.hobbies[0] }と、{ identity.hobbies[1] }です。</li>
+      }
+    </ul>
+    <p>私のスキルは以下の通りです。</p>
+    <ul>
+      { skills.map((skill) => <li>{ skill }</li>) }
+    </ul>
 	</body>
 </html>
