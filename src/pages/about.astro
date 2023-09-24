@@ -9,6 +9,10 @@ const identity = {
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "攻撃力アップ"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="ja">
@@ -36,5 +40,8 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "攻撃力アッ�
     <ul>
       { skills.map((skill) => <li>{ skill }</li>) }
     </ul>
+    { happy && <p>幸せです！</p> }
+    { finished && <p>このチュートリアルを終えました！</p> }
+    { goal === 3 ? <p>3日で終えるのが目標です。</p> : <p>3日で終えるのが目標ではありません。</p> }
 	</body>
 </html>
