@@ -1,31 +1,16 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-const pageTitle = "ブログ";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "ブログ!";
 ---
 
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/astro-tutorial/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle }</title>
-	</head>
-	<body>
-    <Header />
-		<h1>{ pageTitle }</h1>
-    <p>記事一覧</p>
-    <ul>
-      <li><a href="/astro-tutorial/posts/post-3/">3番目の記事</a></li>
-      <li><a href="/astro-tutorial/posts/post-2/">2番目の記事</a></li>
-      <li><a href="/astro-tutorial/posts/post-1/">最初の記事</a></li>
-    </ul>
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-	</body>
-</html>
+<BaseLayout pageTitle={ pageTitle }>
+  <p>記事一覧</p>
+  <ul>
+    <li><a href="/astro-tutorial/posts/post-3/">3番目の記事</a></li>
+    <li><a href="/astro-tutorial/posts/post-2/">2番目の記事</a></li>
+    <li><a href="/astro-tutorial/posts/post-1/">最初の記事</a></li>
+  </ul>
+  <script>
+    import "../scripts/menu.js";
+  </script>
+</BaseLayout>
