@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.vue';
 const pageTitle = "Astro チュートリアル";
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
     <h2>ブログのサブタイトル</h2>
+    <Greeting client:load messages={["どうも", "こんにちは", "はじめまして", "ようこそ"]} />
 </Baselayout>
