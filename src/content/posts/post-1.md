@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: '最初の記事'
 pubDate: 2023-09-24
 description: 'これは私の新しいAstroブログの最初の記事です。'

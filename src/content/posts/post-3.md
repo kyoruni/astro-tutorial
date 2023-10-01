@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 3番目の記事
 author: Astro学習者
 description: "上手くいかないことがありましたが、コミュニティに質問して助けてもらいました！"
